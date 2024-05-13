@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User Details</title>
+		<link rel="stylesheet" href="styles/userStyle.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="user-profile">
+				<div class="user-info">
+					<img id="avatar" alt="User Avatar" />
+					<div class="user-name">
+						<p id="name"></p>
+						<i id="username"></i>
+					</div>
+					<div class="user-stats">
+						<p><span id="followers"></span> followers</p>
+						<p><span id="following"></span> following</p>
+					</div>
+				</div>
+				<div class="user-details" id="userDetails">
+					<p id="bio"></p>
+					<p id="location"></p>
+					<p id="twitter"></p>
+					<p id="github"></p>
+				</div>
+			</div>
+			<div class="reposContainer">
+				<h2>Repositories</h2>
+				<!-- <div id="search-container">
+					<label for="repoSearch">Search Repositories:</label>
+					<input type="text" id="repoSearch" />
+					<button onclick="searchRepos()">Search</button>
+				</div> -->
+				<ul id="repos"></ul>
+			</div>
+			<div id="pagination">
+				<ul id="pages"></ul>
+				<select name="perPage" id="perPage" onchange="updatePerPage()">
+					<option value="10" selected>10</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</div>
+		</div>
+		<div id="loader"></div>
+		<script src="script/userScript.js"></script>
+	</body>
+</html>
